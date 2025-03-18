@@ -1,0 +1,166 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Signup</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="register.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <form action="r.php" method="post" onsubmit="return validateForm()">
+            <h1>Sign Up</h1>
+            
+            <div class="input-box">
+                <input type="text" id="username" name="username" placeholder="Username" required>
+            </div>
+            
+            <div class="input-box">
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+            
+            <div class="input-box">
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+            </div>
+
+            <div class="input-box">
+                <select id="zodiacSign" name="zodiacSign" required>
+                    <option value="" disabled selected>Select Your Zodiac Sign</option>
+                    <option value="Aries">Aries</option>
+                    <option value="Taurus">Taurus</option>
+                    <option value="Gemini">Gemini</option>
+                    <option value="Cancer">Cancer</option>
+                    <option value="Leo">Leo</option>
+                    <option value="Virgo">Virgo</option>
+                    <option value="Libra">Libra</option>
+                    <option value="Scorpio">Scorpio</option>
+                    <option value="Sagittarius">Sagittarius</option>
+                    <option value="Capricorn">Capricorn</option>
+                    <option value="Aquarius">Aquarius</option>
+                    <option value="Pisces">Pisces</option>
+                </select>
+            </div>
+            
+            <div class="input-box">
+                <input type="date" id="dob" name="dob" placeholder="DOB" required>
+            </div>
+            
+            <button type="submit" class="btn">Signup</button>
+            <div class="register-link">
+                <p>Already have an account? <a href="login.html">Login</a></p>
+            </div>
+
+            
+            <div id="error" class="error"></div>
+        </form>
+    </div>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Signup</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <form action="r.php" method="post" onsubmit="return validateForm()">
+            <h1>Sign Up</h1>
+            
+            <div class="input-box">
+                <input type="text" id="username" name="username" placeholder="Username" required>
+            </div>
+            
+            <div class="input-box">
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+            
+            <div class="input-box">
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+            </div>
+
+            <div class="input-box">
+                <select id="zodiacSign" name="zodiacSign" required>
+                    <option value="" disabled selected>Select Your Zodiac Sign</option>
+                    <option value="Aries">Aries</option>
+                    <option value="Taurus">Taurus</option>
+                    <option value="Gemini">Gemini</option>
+                    <option value="Cancer">Cancer</option>
+                    <option value="Leo">Leo</option>
+                    <option value="Virgo">Virgo</option>
+                    <option value="Libra">Libra</option>
+                    <option value="Scorpio">Scorpio</option>
+                    <option value="Sagittarius">Sagittarius</option>
+                    <option value="Capricorn">Capricorn</option>
+                    <option value="Aquarius">Aquarius</option>
+                    <option value="Pisces">Pisces</option>
+                </select>
+            </div>
+            
+            <div class="input-box">
+                <input type="date" id="dob" name="dob" placeholder="DOB" required>
+            </div>
+            
+            <button type="submit" class="btn">Signup</button>
+            <div class="register-link">
+                <p>Already have an account? <a href="login.html">Login</a></p>
+            </div>
+
+            <!-- Error message container -->
+            <div id="error" class="error"></div>
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            var username = document.getElementById("username").value.trim();
+            var password = document.getElementById("password").value.trim();
+            var confirmPassword = document.getElementById("confirmPassword").value.trim();
+            var dob = document.getElementById("dob").value.trim();
+            var zodiacSign = document.getElementById("zodiacSign").value.trim();
+    
+            var errors = [];
+    
+            if (username === "") {
+                errors.push("Username is required");
+            } else if (!/^[a-zA-Z0-9]{5,}$/.test(username)) {
+                errors.push("Username must contain at least 5 characters and consist of letters, numbers");
+            }
+    
+            if (password === "") {
+                errors.push("Password is required");
+            } else if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(password)) {
+                errors.push("Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special character");
+            }
+    
+            if (confirmPassword === "") {
+                errors.push("Confirm password is required");
+            } else if (password !== confirmPassword) {
+                errors.push("Passwords do not match");
+            }
+    
+            if (dob === "") {
+                errors.push("Date of birth is required");
+            }
+    
+            if (zodiacSign === "") {
+                errors.push("Zodiac sign is required");
+            }
+    
+            if (errors.length > 0) {
+                // Show alerts for each error
+                errors.forEach(function(error) {
+                    alert(error);
+                });
+                return false;
+            }
+    
+            return true;
+        }
+    </script>
+    
+</body>
+</html>

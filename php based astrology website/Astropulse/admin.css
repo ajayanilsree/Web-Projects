@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    background-color: #FFA500;
+    padding: 20px 0;
+}
+
+.logo {
+    margin: 0;
+    color: #FFF;
+}
+
+.content {
+    padding: 50px 0;
+}
+
+.blocks {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.block {
+    width: 300px;
+    padding: 20px;
+    background-color: #FFA500;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.block h3 {
+    margin-top: 0;
+    color: #FFF;
+}
+
+.block p {
+    margin-bottom: 0;
+    color: #FFF;
+}
+
+.footer {
+    margin-top: 25%;
+    background-color: #FFA500;
+    padding: 20px 0;
+    text-align: center;
+    color: #FFF;
+}
+/* Add this CSS to position the logout button */
+.logout-btn {
+    color: #FFF;
+    text-decoration: none;
+    font-size: 16px;
+    float: right; /* Float the button to the right */
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #FF4500;
+    border-radius: 5px;
+}
+
+.logout-btn:hover {
+    background-color: #FFF500;
+}
+

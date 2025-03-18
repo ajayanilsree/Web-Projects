@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    background-color: #FFA500;
+    padding: 20px 0;
+}
+
+.logo {
+    margin: 0;
+    color: #FFF;
+}
+
+.content {
+    padding: 50px 0;
+}
+
+.user-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.user-card {
+    background-color: #FFA500;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.user-card h3 {
+    margin-top: 0;
+    color: #FFF;
+}
+
+.user-card p {
+    margin-bottom: 5px;
+    color: #FFF;
+}
+
+.delete-btn {
+    background-color: #FFF;
+    color: #FFA500;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer {
+    margin-top: 15%;
+    background-color: #FFA500;
+    padding: 20px 0;
+    text-align: center;
+    color: #FFF;
+}
+.contact-requests {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.request-box {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: calc(33.33% - 20px); /* Adjust as needed */
+    box-sizing: border-box;
+    background-color: #FFA500;
+}
+
+.request-detail {
+    margin-bottom: 10px;
+}
+
+.detail-label {
+    font-weight: bold;
+    margin-right: 5px;
+}

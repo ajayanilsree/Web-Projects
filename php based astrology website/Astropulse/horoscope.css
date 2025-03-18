@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: #f90;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.header .logo {
+    margin: 0;
+}
+
+.logout-btn {
+    float: right;
+    color: #fff;
+    background-color: red;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.content {
+    padding: 20px 0;
+}
+
+.horoscope-info {
+    text-align: center;
+}
+
+.sign-image {
+    width: 60%;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.sign-description {
+    font-size: 18px;
+    line-height: 3;
+    width: 60%;
+    height: auto;
+    margin: 0 auto; /* Add this to center the text */
+}
+
+.footer {
+    background-color: #f90;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}

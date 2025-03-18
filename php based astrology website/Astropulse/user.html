@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Home</title>
+    <link rel="stylesheet" href="usser.css">
+</head>
+<body>
+    <?php session_start();?>
+    <?php $username = $_SESSION['username'];?> <!-- Declare username variable -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">User Panel</h1>
+            <a href="login.html" class="logout-btn">Logout</a> <!-- Logout button -->
+        </div>
+    </header>
+    <div class="content">
+        <div class="container">
+            <h2>Hello, <?php echo $username;?></h2> <!-- Display username -->
+            <div class="blocks">
+                <div class="block" onclick="location.href='horoscope.php';">
+                    <h3>Daily Horoscope</h3>
+                    <p>View your daily horoscope</p>
+                </div>
+                <div class="block" onclick="location.href='contact.html';">
+                    <h3>Contact Admin</h3>
+                    <p>Contact admin for any doubt</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 User Panel. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+

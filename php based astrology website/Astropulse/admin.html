@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Home</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Astro Pulse</h1>
+            <a href="login.html" class="logout-btn">Logout</a> <!-- Logout button -->
+        </div>
+    </header>
+    <div class="content">
+        <div class="container">
+            <h2>Hello, Admin</h2>
+            <div class="blocks">
+                <div class="block" onclick="location.href='user.php';">
+                    <h3>User List</h3>
+                    <p>View and manage users</p>
+                </div>
+                <div class="block" onclick="location.href='req.php';">
+                    <h3>Requests</h3>
+                    <p>View to requests</p>
+                </div>
+                <div class="block" onclick="location.href='update.php';">
+                    <h3>Update Horoscope</h3>
+                    <p>Update Daily Horoscope</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Admin Panel. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
